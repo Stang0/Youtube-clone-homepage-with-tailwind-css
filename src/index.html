@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://kit.fontawesome.com/65f264fae4.css" crossorigin="anonymous">
+  <title>Youtube</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="https://www.thaimediafund.or.th/wp-content/uploads/2021/03/youtube-1-300x300.png">
+  <style type="text/tailwindcss">
+   
+  </style>
+</head>
+<body>
+  <!--start navbar-->
+  <div class="nav flex items-center py-8 px-2 
+    justify-between bg-zinc-900 sticky top-0 z-10 w-full h-14
+    ">
+    <div class="Startnav flex items-center  ">
+      <i class="fa-solid fa-bars cursor-pointer text-white
+      w-6 mr-6  MenuIcon
+      "></i>
+      <img class="w-20" src="https://www.tunecore.com/wp-content/uploads/sites/12/2022/11/youtube-w.png" alt="">
+    </div>
+    <div class="SearchCenter flex items-center">
+      <div class="search-box flex items-center 
+       border border-gray-600 mr-4 py-1 px-3 rounded-full
+
+      ">
+          <input type="text" placeholder="ค้นหา" class="
+          w-96 border-0 outline-none bg-transparent focus:text-white
+          " >
+          <i class="fa-solid fa-magnifying-glass
+           text-white
+           " ></i>
+      </div>
+      <div class=" w-8 h-8 text-white
+      bg-zinc-800 hover:bg-zinc-600 cursor-pointer  rounded-full flex justify-center items-center">
+      <i class="fa-solid fa-microphone-lines"></i>
+      </div>
+    </div>
+    <div class="Endnav text-white w-44 flex mr-6 items-center 
+    justify-between  static z-10  top-0">
+      <i class="fa-sharp fa-solid fa-video"></i>
+      <div class="relative">
+        <i class="fa-solid fa-bell  "></i>
+        <p class="absolute top-0 -right-2 bg-red-600 rounded-full
+         w-4 h-4 text-center notify 
+         ">1</p>
+      </div>
+      <img src="img/user.png" alt="" 
+      class="w-7  rounded-full mr-0
+      ">
+    </div>
+  </div>
+  <!--end navbar-->
+  
+  <!--slider bar start-->
+  <div class="bg-zinc-900 w-52  fixed scroll-pr-1 pt-5
+   hover:overflow-y-scroll sliderbar
+    ">
+    <div class="flex flex-col text-white">
+      <div class="bg-zinc-700  px-3 mx-3 mt-4 py-2   contaimer-menu  active rounded-md">
+        <a href="#" class=" flex flex-row items-center ">
+          <i class="fa-solid fa-house mr-3"></i>
+          <div>
+            <p class="text-white ">หน้าแรก</p>
+          </div>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+
+        <a href="#" class="flex flex-row items-center">
+          <i class="fa-solid fa-film image"></i>
+          <p class="ml-3">shorts</p>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+
+        <a href="#" class="flex flex-row items-center">
+          <i class="fa-solid fa-photo-film image"></i>
+          <p class="ml-3">การติดตาม</p>
+        </a>
+      </div>
+      <div class="w-36 h-0.5 bg-zinc-600 my-4 ml-6 line "></div>
+
+      <div class="hideInSm">
+        
+      
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2  rounded-md ">
+        
+        <a href="#" class="flex flex-row items-center">
+          <i class="fa-solid fa-photo-film image "></i>
+          <p class="ml-3">คลังวีดีโอ</p>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+        <a href="#" class="flex flex-row items-center">
+          <i class="fa-solid fa-clock-rotate-left image"></i>
+          <p class="ml-3">ประวัติการเข้าชม</p>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+        <a href="#" class="flex flex-row items-center">
+          <i class="fa-solid fa-camera"></i>
+          <p class="ml-3">วีดีโอของคุณ</p>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+        <a href="#" class="flex flex-row items-center">
+          <i class="fa-solid fa-clock"></i>
+          <p class="ml-3">ดูภายหลัง</p>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+        <a href="#" class="flex flex-row items-center">
+          <i class="fa-solid fa-thumbs-up"></i>
+          <p class="ml-3">วีดีโอที่ชอบ</p>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md 
+        showmore
+        " id="ShowMore">
+        <a href="#" class="flex flex-row items-center">
+          <i class="fa-solid fa-chevron-down"></i>
+          <p class="ml-3">ดูเพิ่มเติม</p>
+        </a>
+      </div>
+
+      <div class="ShowContent" id="Show">
+        <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md 
+       
+          ">
+          <a href="#" class="flex flex-row items-center">
+            <i class="fa-solid fa-forward-fast"></i>
+            <p class="ml-3">playlist1</p>
+          </a>
+        </div>
+        <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md 
+            
+          ">
+          <a href="#" class="flex flex-row items-center">
+            <i class="fa-solid fa-forward-fast"></i>
+            <p class="ml-3">playlist2</p>
+          </a>
+        </div>
+        <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md 
+           notShow  
+          ">
+          <a href="#" class="flex flex-row items-center">
+            <i class="fa-solid fa-chevron-up"></i>
+            <p class="ml-3">แสดงน้อยลง</p>
+          </a>
+        </div>
+
+      </div>
+      <div class="w-36 h-0.5 bg-zinc-600 my-4 ml-6 line "></div>
+
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+
+        <a href="#" class="flex flex-row items-start">
+          <p class="">การติดตาม</p>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+
+        <a href="#" class="flex flex-row items-center justify-start">
+          <img src="img/Portflio (1).png" class="w-10 h-8" alt="">
+          <p class="ml-2 text-sm">user1</p>
+          <i class="fa-solid fa-signal ml-3 text-red-500"></i>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+
+        <a href="#" class="flex flex-row items-center justify-start">
+          <img src="img/Portflio (1).png" class="w-10 h-8" alt="">
+          <p class="ml-2 text-sm">user2</p>
+          <i class="fa-solid fa-signal ml-3 text-red-500"></i>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+
+        <a href="#" class="flex flex-row items-center justify-start">
+          <img src="img/Portflio (1).png" class="w-10 h-8" alt="">
+          <p class="ml-2 text-sm">user3</p>
+          <i class="fa-solid fa-signal ml-3 text-red-500"></i>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+
+        <a href="#" class="flex flex-row items-center justify-start">
+          <img src="img/Portflio (1).png" class="w-10 h-8" alt="">
+          <p class="ml-2 text-sm">user4</p>
+          <i class="fa-solid fa-signal ml-3 text-red-500"></i>
+        </a>
+      </div>
+      <div class="w-36 h-0.5 bg-zinc-600 my-4 ml-6 line "></div>
+
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+
+        <a href="#" class="flex flex-row items-start">
+          <p class="">สำรวจ</p>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+        <a href="#" class="flex flex-row items-center">
+          <i class="fa-solid fa-fire"></i>
+          <p class="ml-3">มาแรง</p>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+        <a href="#" class="flex flex-row items-center">
+          <i class="fa-solid fa-music"></i>
+          <p class="ml-3">เพลง</p>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+        <a href="#" class="flex flex-row items-center">
+          <i class="fa-solid fa-gamepad"></i>          
+          <p class="ml-3">เกม</p>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+        <a href="#" class="flex flex-row items-center">
+          <i class="fa-regular fa-newspaper"></i>          
+          <p class="ml-3">ข่าวสาร</p>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+        <a href="#" class="flex flex-row items-center">
+          <i class="fa-solid fa-volleyball"></i>         
+          <p class="ml-3">กีฟ้า</p>
+        </a>
+      </div>
+      <div class="w-36 h-0.5 bg-zinc-600 my-4 ml-6 line "></div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+        <a href="#" class="flex flex-row items-center">
+          <i class="fa-solid fa-gear"></i>        
+          <p class="ml-3">การตั้งค่า</p>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+        <a href="#" class="flex flex-row items-center">
+          <i class="fa-solid fa-book-medical"></i>          
+          <p class="ml-3">ประวัติรายงาน</p>
+        </a>
+      </div>
+      <div class="hover:bg-zinc-700 px-3 mx-3  py-2   contaimer-menu rounded-md">
+        <a href="#" class="flex flex-row items-center">
+          <i class="fa-regular fa-circle-question"></i>         
+          <p class="ml-3">ความช่วยเหลือ</p>
+        </a>
+      </div>
+      <div class="w-36 h-0.5 bg-zinc-600 my-4 ml-6 line "></div>
+      <div class="px-3 mx-3  py-2   contaimer-menu rounded-md">
+        <div class="flex flex-row items-center ">
+         <p class="ml-3 text-sm text-gray-600">เกี่ยวกับสื่อลิขสิทธิ์ติดต่อเราครีเอเตอร์โฆษณานักพัฒนาซอฟต์แวร์
+          ข้อกำหนดความเป็นส่วนตัวนโยบายและความปลอดภัยวิธีการทำงานของ YouTubeทดลองใช้ฟีเจอร์ใหม่
+         <br> © 2023 Google LLC <br>=============<br>
+          CREATE BY STANG
+        </p>
+         </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <!--slider bar end -->
+
+  <!--main start-->
+  <div class="main w-full bg-zinc-900 pl-60 h-full pr-12  ">
+    <div class="flex py-2 px-3 fixed w-full bg-zinc-900 ">
+      <a href="#" class="bg-white py-1 px-3 rounded-xl 
+      text-black hover:bg-zinc-500
+      ">ทั้งหมด</a>
+      <a href="#" class="bg-zinc-700 py-1 px-3 rounded-xl 
+      text-white ml-3 hover:bg-zinc-500
+      ">เกม</a>
+      <a href="#" class="bg-zinc-700 py-1 px-3 rounded-xl 
+      text-white ml-3 hover:bg-zinc-500
+      ">มิกซ์</a>
+      <a href="#" class="bg-zinc-700 py-1 px-3 rounded-xl 
+      text-white ml-3 hover:bg-zinc-500
+      ">เพลง</a>
+      <a href="#" class="bg-zinc-700 py-1 px-3 rounded-xl 
+      text-white ml-3 hover:bg-zinc-500
+      ">สด</a>
+    </div>
+
+    <div class="pt-20 pl-5  gap-4 gap-y-4 container-video">
+      <div class="transition ease-in-out  hover:scale-125
+       overflow-hidden  duration-700 delay-100 
+       hover:bg-black hover:rounded-2xl text-sm
+        hide " >
+        <a href="">
+          <img class="w-full rounded-md" src="https://i.ytimg.com/vi/odUOGOi_FOs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCUk9tPRNNcSg6LDqR8HZ4EO8bXbg" alt="">
+        </a>
+        <div class="flex items-start mt-3" >
+          
+            <img class="w-12 h-9  " src="img/Portflio (1).png" alt="">
+          <div class="text-white pb-4">
+              <a href="" class="font-semibold">เรื่องหลอนที่สุดแห่งปี 2021 ชุดที่ 4 | THE GHOST RADIO</a>
+              <p class="font-light text-gray-500">TheghostradioOfficial</p>
+              <p class="font-light text-gray-500">การดู 1.8ล้านครั้ง 1ปีที่แล้ว</p>
+              <div id="" class="buttonhide">
+                <div class="flex "  >
+                  <a href="" class="flex mt-2 items-center py-1 justify-center
+                   bg-slate-500  rounded-full w-32 
+                   " >
+               
+                    <i class="fa-solid fa-clock"></i>
+                    <p class="ml-3">ดูภายหลัง</p>
+              
+                  </a>
+                  <a href="" class="flex mt-2 ml-3 items-center py-1
+                   justify-center bg-slate-500  rounded-full w-32 
+                    " >
+               
+                    <i class="fa-solid fa-list-ul"></i>
+                    <p class="ml-3">เพิ่มลงในคิว</p>
+              
+                  </a>
+                 
+                </div>
+                </div>
+            </div>
+            
+          
+        </div>
+      </div>
+
+      <div class="transition ease-in-out  hover:scale-125
+       overflow-hidden  duration-700 delay-100 
+       hover:bg-black hover:rounded-2xl text-sm
+         hide " >
+        <a href="">
+          <img class="w-full rounded-md" src="https://i.ytimg.com/vi/AJEQKmz59oU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAkjWmr5sVUeB7UcEeMlcRkHlf0gA" alt="">
+        </a>
+        <div class="flex items-start mt-3" >
+          
+            <img class="w-12 h-9  " src="img/Portflio (1).png" alt="">
+          <div class="text-white pb-4">
+              <a href="" class="font-semibold">คืนพุธ มุดผ้าห่ม : คืนที่ 176</a>
+              <p class="font-light text-gray-500">
+                คืนพุธ มุดผ้าห่ม [ Official ]</p>
+              <p class="font-light text-gray-500">การดู 1 หมื่น ครั้ง
+                2 ชั่วโมงที่ผ่านมา</p>
+              <div  class="buttonhide">
+                <div class="flex "  >
+                  <a href="" class="flex mt-2 items-center py-1 justify-center
+                   bg-slate-500  rounded-full w-32 buttonShow
+                   " >
+               
+                    <i class="fa-solid fa-clock"></i>
+                    <p class="ml-3">ดูภายหลัง</p>
+              
+                  </a>
+                  <a href="" class="flex mt-2 ml-3 items-center py-1
+                   justify-center bg-slate-500  rounded-full w-32 
+                   buttonShow " >
+               
+                    <i class="fa-solid fa-clock"></i>
+                    <p class="ml-3">ดูภายหลัง</p>
+              
+                  </a>
+                 
+                </div>
+                </div>
+            </div>
+            
+          
+        </div>
+      </div>
+
+      <div class="transition ease-in-out  hover:scale-125
+       overflow-hidden  duration-700 delay-100 
+       hover:bg-black hover:rounded-2xl text-sm
+        hide " id=>
+        <a href="">
+          <img class="w-full rounded-md" src="https://i.ytimg.com/vi/YYTcVcvFvDY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAvsD1HlEr6Njhuan_OP1e7KDAgSw" alt="">
+        </a>
+        <div class="flex items-start mt-3" >
+          
+            <img class="w-12 h-9  " src="img/Portflio (1).png" alt="">
+          <div class="text-white pb-4">
+              <a href="" class="font-semibold">สายชาร์จดูดเงินในตำนาน</a>
+              <p class="font-light text-gray-500">9arm</p>
+              <p class="font-light text-gray-500">การดู 1.9แสนครั้ง 10วันที่ผ่านมา</p>
+              <div id="" class="buttonhide">
+                <div class="flex "  >
+                  <a href="" class="flex mt-2 items-center py-1 justify-center
+                   bg-slate-500  rounded-full w-32 buttonShow
+                   " >
+               
+                    <i class="fa-solid fa-clock"></i>
+                    <p class="ml-3">ดูภายหลัง</p>
+              
+                  </a>
+                  <a href="" class="flex mt-2 ml-3 items-center py-1
+                   justify-center bg-slate-500  rounded-full w-32 
+                   buttonShow " >
+               
+                    <i class="fa-solid fa-clock"></i>
+                    <p class="ml-3">ดูภายหลัง</p>
+              
+                  </a>
+                 
+                </div>
+                </div>
+            </div>
+            
+          
+        </div>
+      </div>
+
+      <div class="transition ease-in-out  hover:scale-125
+       overflow-hidden  duration-700 delay-100 
+       hover:bg-black hover:rounded-2xl text-sm
+        hide " id=>
+        <a href="">
+          <img class="w-full rounded-md" src="https://i.ytimg.com/vi/tVr89249gwM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDuGh4a2J5Nb2X1P3ZFJLRPbSoYSw" alt="">
+        </a>
+        <div class="flex items-start mt-3" >
+          
+            <img class="w-12 h-9  " src="img/Portflio (1).png" alt="">
+          <div class="text-white pb-4">
+              <a href="" class="font-semibold">Three.js coding tutorial: how to enhance a website by adding a 3D element? ft Bruno Simon | Prismic
+              </a>
+              <p class="font-light text-gray-500">Prismic</p>
+              <p class="font-light text-gray-500">การดู 1.8ล้านครั้ง 1ปีที่แล้ว</p>
+              <div id="" class="buttonhide">
+                <div class="flex "  >
+                  <a href="" class="flex mt-2 items-center py-1 justify-center
+                   bg-slate-500  rounded-full w-32 buttonShow
+                   " >
+               
+                    <i class="fa-solid fa-clock"></i>
+                    <p class="ml-3">ดูภายหลัง</p>
+              
+                  </a>
+                  <a href="" class="flex mt-2 ml-3 items-center py-1
+                   justify-center bg-slate-500  rounded-full w-32 
+                   buttonShow " >
+               
+                    <i class="fa-solid fa-clock"></i>
+                    <p class="ml-3">ดูภายหลัง</p>
+              
+                  </a>
+                 
+                </div>
+                </div>
+            </div>
+            
+          
+        </div>
+      </div>
+
+      <div class="transition ease-in-out  hover:scale-125
+       overflow-hidden  duration-700 delay-100 
+       hover:bg-black hover:rounded-2xl text-sm
+        hide " id=>
+        <a href="">
+          <img class="w-full rounded-md" src="https://i.ytimg.com/vi/jjP3n1zwR9M/hq720_live.jpg?sqp=CIiO558G-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLByF47YKf9hOyv0GIGnR6BYvF7r9w" alt="">
+        </a>
+        <div class="flex items-start mt-3" >
+          
+            <img class="w-12 h-9  " src="img/Portflio (1).png" alt="">
+          <div class="text-white pb-4">
+              <a href="" class="font-semibold">[🔴 Live ] คุยกันวันเสาร์ เส้นทางการเริ่มต้นเป็นโปรแกรมเมอร์ 👨‍💻💯
+              </a>
+              <p class="font-light text-gray-500">Patiphan Phengpao</p>
+              <p class="font-light text-gray-500">54 คนดูอยู่ในขณะนี้  สตรีมเริ่มเมื่อ 49 นาที ที่ผ่านมา</p>
+              <div id="" class="">
+                <div class="flex "  >
+                  <a href="" class="flex mt-2 items-center py-1 justify-center
+                   bg-red-500  rounded-full w-14 
+                   " >
+               
+                   <i class="fa-solid fa-satellite-dish"></i>
+                    <p class="ml-3">สด</p>
+              
+                  </a>
+                  
+                 
+                </div>
+                </div>
+            </div>
+            
+          
+        </div>
+      </div>
+
+      <div class="transition ease-in-out  hover:scale-125
+       overflow-hidden  duration-700 delay-100 
+       hover:bg-black hover:rounded-2xl text-sm
+        hide " id=>
+        <a href="">
+          <img class="w-full rounded-md" src="https://i.ytimg.com/vi/4vgRuTjaofI/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAGyTRv2OdzWUxM16pdY48s5jliUg" alt="">
+        </a>
+        <div class="flex items-start mt-3" >
+          
+            <img class="w-12 h-9  " src="img/Portflio (1).png" alt="">
+          <div class="text-white pb-4">
+              <a href="" class="font-semibold">การทำ Smooth Scrolling Effect ให้กับเว็บไซต์ด้วยโค้ดแค่ 1 บรรทัด!! 👨‍💻💯</a>
+              <p class="font-light text-gray-500">Patiphan Phengpao</p>
+              <p class="font-light text-gray-500">การดู 2,339 ครั้ง  24 ก.พ. 2023 </p>
+              <div id="" class="buttonhide">
+                <div class="flex "  >
+                  <a href="" class="flex mt-2 items-center py-1 justify-center
+                   bg-slate-500  rounded-full w-32 buttonShow
+                   " >
+               
+                    <i class="fa-solid fa-clock"></i>
+                    <p class="ml-3">ดูภายหลัง</p>
+              
+                  </a>
+                  <a href="" class="flex mt-2 ml-3 items-center py-1
+                   justify-center bg-slate-500  rounded-full w-32 
+                   buttonShow " >
+               
+                    <i class="fa-solid fa-clock"></i>
+                    <p class="ml-3">ดูภายหลัง</p>
+              
+                  </a>
+                 
+                </div>
+                </div>
+            </div>
+            
+          
+        </div>
+      </div>
+
+      <div class="transition ease-in-out  hover:scale-125
+       overflow-hidden  duration-700 delay-100 
+       hover:bg-black hover:rounded-2xl text-sm
+        hide " id=>
+        <a href="">
+          <img class="w-full rounded-md" src="https://i.ytimg.com/vi/1fPWr0d5zBE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDqryEyIRKz83T8KpwEWlXL5dMJLg" alt="">
+        </a>
+        <div class="flex items-start mt-3" >
+          
+            <img class="w-12 h-9  " src="img/Portflio (1).png" alt="">
+          <div class="text-white pb-4">
+              <a href="" class="font-semibold">10 years of coding in 13 minutes
+              </a>
+              <p class="font-light text-gray-500">Joma Tech</p>
+              <p class="font-light text-gray-500">การดู 3,991,207 ครั้ง  19 ต.ค. 2021 </p>
+              <div id="" class="buttonhide">
+                <div class="flex "  >
+                  <a href="" class="flex mt-2 items-center py-1 justify-center
+                   bg-slate-500  rounded-full w-32 buttonShow
+                   " >
+               
+                    <i class="fa-solid fa-clock"></i>
+                    <p class="ml-3">ดูภายหลัง</p>
+              
+                  </a>
+                  <a href="" class="flex mt-2 ml-3 items-center py-1
+                   justify-center bg-slate-500  rounded-full w-32 
+                   buttonShow " >
+               
+                    <i class="fa-solid fa-clock"></i>
+                    <p class="ml-3">ดูภายหลัง</p>
+              
+                  </a>
+                 
+                </div>
+                </div>
+            </div>
+            
+          
+        </div>
+      </div>
+
+      <div class="transition ease-in-out  hover:scale-125
+       overflow-hidden  duration-700 delay-100 
+       hover:bg-black hover:rounded-2xl text-sm
+        hide " id=>
+        <a href="">
+          <img class="w-full rounded-md" src="https://i.ytimg.com/vi/wbPmsMlL_j4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBaLXPrFrmoDcNwRrbhv89KhUaleA" alt="">
+        </a>
+        <div class="flex items-start mt-3" >
+          
+            <img class="w-12 h-9  " src="img/Portflio (1).png" alt="">
+          <div class="text-white pb-4">
+              <a href="" class="font-semibold">ดราม่า! ไข่พะโล้ "หม่อมถนัดแดก" 2 ฟอง 85 บาท</a>
+              <p class="font-light text-gray-500">
+                AMARINTV : อมรินทร์ทีวี</p>
+              <p class="font-light text-gray-500">การดู 1,110,375 ครั้ง  3 ก.พ. 2023 </p>
+              <div id="" class="buttonhide">
+                <div class="flex "  >
+                  <a href="" class="flex mt-2 items-center py-1 justify-center
+                   bg-slate-500  rounded-full w-32 buttonShow
+                   " >
+               
+                    <i class="fa-solid fa-clock"></i>
+                    <p class="ml-3">ดูภายหลัง</p>
+              
+                  </a>
+                  <a href="" class="flex mt-2 ml-3 items-center py-1
+                   justify-center bg-slate-500  rounded-full w-32 
+                   buttonShow " >
+               
+                    <i class="fa-solid fa-clock"></i>
+                    <p class="ml-3">ดูภายหลัง</p>
+              
+                  </a>
+                 
+                </div>
+                </div>
+            </div>
+            
+          
+        </div>
+      </div>
+
+      
+      
+    </div >      
+    <div class="w-full h-1 bg-zinc-600 my-12 ml-6 line "></div>
+    <div class="shorhide">
+      <div class="w-full bg-zinc-900 pl-12 pr-12 text-white flex items-center">
+        <i class="fa-brands fa-youtube text-red-500"></i>
+        <p class="text-lg ml-3 font-bold">Short</p>
+      </div>
+      <div class="short pt-8 pl-12 gap-4 gap-y-4 ">
+      <div class="flex flex-col cursor-pointer">
+        <img class="rounded-2xl w-full" src="https://i.ytimg.com/vi/yCgTCBeRHSE/hq720_2.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLCdS0RGa1bYrk39YxXjD99ch53mUw" alt="">
+        <div class="justify-start text-white mt-2">
+          <h1>3 อันดับโมริที่ผมชอบมากที่สุดในเกม Dead by Daylight</h1>
+          <p class="text-gray-500">การดู 7.3 พัน ครั้ง</p>
+        </div>
+      </div>
+      <div class="flex flex-col cursor-pointer">
+        <img class="rounded-2xl w-full" src="https://i.ytimg.com/vi/xK9GCH1Blt8/hq720_2.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLBqUCW5sSm-4uqxu63WPIOcU3_ICQ" alt="">
+        <div class="justify-start text-white mt-2">
+          <h1>สลับกันบ้าง! เกมทายชื่อนักเตะ EP14</h1>
+          <p class="text-gray-500">การดู 6 หมื่น ครั้ง</p>
+        </div>
+      </div>
+      <div class="flex flex-col cursor-pointer">
+        <img class="rounded-2xl w-full" src="https://i.ytimg.com/vi/IQOA_DJJiRU/hq720_2.jpg?sqp=-oaymwEdCJYDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLAQ7Fo-tCGruRDb-kAWZIIhKvuNJQ" alt="">
+        <div class="justify-start text-white mt-2">
+          <h1>Rare Beef Steak #shorts</h1>
+          <p class="text-gray-500">การดู 23 ล้าน ครั้ง</p>
+        </div>
+      </div>
+      <div class="flex flex-col cursor-pointer">
+        <img class="rounded-2xl w-full" src="https://i.ytimg.com/vi/gRNo_JOl-9g/hq720_2.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLB4Zz5nO8F0-uLpBP3i4-jRmYBqzA" alt="">
+        <div class="justify-start text-white mt-2">
+          <h1>CoPilot Q&amp;A</h1>
+          <p class="text-gray-500">การดู 1.2 แสน ครั้ง</p>
+        </div>
+      </div>
+      <div class="flex flex-col cursor-pointer">
+        <img class="rounded-2xl w-full" src="https://i.ytimg.com/vi/cj4PQOBYeiY/hq720_2.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLBAkdivTixefN_L3Nz1J3CaWB-z9g" alt="">
+        <div class="justify-start text-white mt-2">
+          <h1>มาทำความรู้จัก HTTP Request แบบไวๆ กัน ! #Shorts</h1>
+          <p class="text-gray-500">การดู 852 ครั้ง</p>
+        </div>
+      </div>
+      <div class="flex flex-col cursor-pointer">
+        <img class="rounded-2xl w-full" src="https://i.ytimg.com/vi/A74Cc0aFfUE/hq720_2.jpg?sqp=-oaymwEdCJUDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE=&rs=AOn4CLCz8lD7dgGcOse5OiKzADmRyyYD8Q" alt="">
+        <div class="justify-start text-white mt-2">
+          <h1>รีวิว รถไฟเวียดนาม 🚞 ใน 1 นาที</h1>
+          <p class="text-gray-500">การดู 1.5 ล้าน ครั้ง</p>
+        </div>
+      </div>
+   
+      
+    </div>
+    <div class="w-full h-1 bg-zinc-600 my-12 ml-6 line "></div>
+    
+      <div class="pt-20 pl-5  gap-4 gap-y-4 container-video py-12">
+        <div class="transition ease-in-out  hover:scale-125
+         overflow-hidden  duration-700 delay-100 
+         hover:bg-black hover:rounded-2xl text-sm
+          hide " >
+          <a href="">
+            <img class="w-full rounded-md" src="https://i.ytimg.com/vi/rtMSGuX0GQ4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA8qCadsjf8rvVslN3aTA-t4UlZ-w" alt="">
+          </a>
+          <div class="flex items-start mt-3" >
+            
+              <img class="w-12 h-9  " src="img/Portflio (1).png" alt="">
+            <div class="text-white pb-4">
+                <a href="" class="font-semibold">Ep.10 Web Storage คืออะไร มีอะไรต้องรู้บ้าง? - สาระเดฟใน 3 นาที Season 2</a>
+                <p class="font-light text-gray-500">BorntoDev</p>
+                <p class="font-light text-gray-500">การดู 4,433 ครั้ง  22 ก.พ. 2023</p>
+                <div id="" class="buttonhide">
+                  <div class="flex "  >
+                    <a href="" class="flex mt-2 items-center py-1 justify-center
+                     bg-slate-500  rounded-full w-32 
+                     " >
+                 
+                      <i class="fa-solid fa-clock"></i>
+                      <p class="ml-3">ดูภายหลัง</p>
+                
+                    </a>
+                    <a href="" class="flex mt-2 ml-3 items-center py-1
+                     justify-center bg-slate-500  rounded-full w-32 
+                      " >
+                 
+                      <i class="fa-solid fa-list-ul"></i>
+                      <p class="ml-3">เพิ่มลงในคิว</p>
+                
+                    </a>
+                   
+                  </div>
+                  </div>
+              </div>
+              
+            
+          </div>
+        </div>
+        <div class="transition ease-in-out  hover:scale-125
+         overflow-hidden  duration-700 delay-100 
+         hover:bg-black hover:rounded-2xl text-sm
+          hide " >
+          <a href="">
+            <img class="w-full rounded-md" src="https://i.ytimg.com/vi/2kg0z1qNrkw/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYElr-BgZfpC0b_elCG6OuDAON2g" alt="">
+          </a>
+          <div class="flex items-start mt-3" >
+            
+              <img class="w-12 h-9  " src="img/Portflio (1).png" alt="">
+            <div class="text-white pb-4">
+                <a href="" class="font-semibold">🔥 Build a REACT JS Portfolio Website Using Tailwind CSS - Get Hired!</a>
+                <p class="font-light text-gray-500">Code Commerce</p>
+                <p class="font-light text-gray-500">การดู 83,621 ครั้ง  10 มี.ค. 2022</p>
+                <div id="" class="buttonhide">
+                  <div class="flex "  >
+                    <a href="" class="flex mt-2 items-center py-1 justify-center
+                     bg-slate-500  rounded-full w-32 
+                     " >
+                 
+                      <i class="fa-solid fa-clock"></i>
+                      <p class="ml-3">ดูภายหลัง</p>
+                
+                    </a>
+                    <a href="" class="flex mt-2 ml-3 items-center py-1
+                     justify-center bg-slate-500  rounded-full w-32 
+                      " >
+                 
+                      <i class="fa-solid fa-list-ul"></i>
+                      <p class="ml-3">เพิ่มลงในคิว</p>
+                
+                    </a>
+                   
+                  </div>
+                  </div>
+              </div>
+              
+            
+          </div>
+        </div>
+        <div class="transition ease-in-out  hover:scale-125
+         overflow-hidden  duration-700 delay-100 
+         hover:bg-black hover:rounded-2xl text-sm
+          hide " >
+          <a href="">
+            <img class="w-full rounded-md" src="https://i.ytimg.com/vi/CzClpFPOOHk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCi_vThGKNKx37JhS7_b4s58iJfPQ" alt="">
+          </a>
+          <div class="flex items-start mt-3" >
+            
+              <img class="w-12 h-9  " src="img/Portflio (1).png" alt="">
+            <div class="text-white pb-4">
+                <a href="" class="font-semibold">เขียนโปรแกรมได้ทุกที่ ทั้งในคอม แท็บเล็ต และมือถือ ด้วยเว็บนี้!! | Codesandbox 👨‍💻💯
+                </a>
+                <p class="font-light text-gray-500">Patiphan Phengpao
+                </p>
+                <p class="font-light text-gray-500">การดู 21,639 ครั้ง  31 มี.ค. 2022</p>
+                <div id="" class="buttonhide">
+                  <div class="flex "  >
+                    <a href="" class="flex mt-2 items-center py-1 justify-center
+                     bg-slate-500  rounded-full w-32 
+                     " >
+                 
+                      <i class="fa-solid fa-clock"></i>
+                      <p class="ml-3">ดูภายหลัง</p>
+                
+                    </a>
+                    <a href="" class="flex mt-2 ml-3 items-center py-1
+                     justify-center bg-slate-500  rounded-full w-32 
+                      " >
+                 
+                      <i class="fa-solid fa-list-ul"></i>
+                      <p class="ml-3">เพิ่มลงในคิว</p>
+                
+                    </a>
+                   
+                  </div>
+                  </div>
+              </div>
+              
+            
+          </div>
+        </div>
+      </div>
+
+
+      
+  </div>
+  <!--main end-->
+  <script src="app.js"></script>
+  <script src="https://kit.fontawesome.com/65f264fae4.js" crossorigin="anonymous"></script>
+</body>
+</html>
